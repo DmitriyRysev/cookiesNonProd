@@ -1,0 +1,139 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Steppe-Book';
+  src: url("./assets/fonts/Steppe-Book.ttf");
+}
+
+@font-face {
+  font-family: 'Steppe-ExtraBold';
+  src: url("./assets/fonts/Steppe-ExtraBold.ttf");
+}
+
+body {
+  background: #5243F4;
+  font-family: 'Steppe-Book', sans-serif;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: white;
+  border-radius: 60px;
+  width: 178px;
+  height: 58px;
+  box-sizing: border-box;
+  padding: 18px;
+  text-align: center;
+  font-size: 18px;
+  color: #5243F4;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+#main-action-button {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+#main-action-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#main-action-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button.violet-button {
+  box-shadow: 0 5px 15px 0 rgba(82, 67, 244, 1);
+  transition: 0.5s;
+}
+
+.button.violet-button:hover {
+  transform: translate(0, -3px);
+  box-shadow: 0 20px 40px 0 rgba(82, 67, 244, 1);
+}
+
+.violet-button {
+  background-color: #5243F4;
+  color: white;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  color: grey;
+  background-color: #343434;
+}
+
+.button.violet-button:disabled {
+  background-color: #343434; /* Серый цвет для отключённой кнопки */
+  box-shadow: none; /* Убираем тень */
+  cursor: not-allowed; /* Меняем указатель мыши */
+  transform: none; /* Убираем анимации */
+}
+
+
+.button:hover:not(:disabled) {
+  background: #eeeeee;
+}
+
+.button.violet-button:hover:not(:disabled) {
+  background-color: #3B2CD8;
+}
+
+.common-title {
+  font-family: 'Steppe-ExtraBold', sans-serif;
+  font-size: 60px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.btn-up {
+  position: fixed;
+  background-color: #1f139c;
+  left: 20px;
+  bottom: 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+.btn-up_hiding {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.btn-up-icon {
+  width: 40px;
+  height: 40px;
+  fill: currentcolor;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #2e20c7;
+  }
+}
